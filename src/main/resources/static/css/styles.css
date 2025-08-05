@@ -1,0 +1,170 @@
+body.dark-floral-bg {
+  background: linear-gradient(#1f1f2e, #2b2c3a);
+  color: #f8f8f8;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('../images/flowers-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.header-bar {
+  background: rgba(34, 34, 51, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 10px #a4c3b2;
+}
+
+.header-bar .logo {
+  font-size: 1.8rem;
+  color: #ffe5f1;
+  font-weight: bold;
+}
+
+.header-bar nav a {
+  color: #d2e8e3;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header-bar nav a:hover {
+  color: #ffb6c1;
+}
+
+.footer-floral {
+  background: #262638;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #3c3c5c;
+  font-size: 0.9rem;
+}
+
+/* Form cards */
+.form-card {
+  background: rgba(40, 40, 60, 0.85);
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.2);
+  color: #f0f0f0;
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 8px;
+  background: #303044;
+  color: #fff;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  background-color: #e09cab;
+  color: #1f1f2e;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffb6c1;
+}
+
+/* Dashboard */
+.dashboard-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(48, 48, 66, 0.85);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.15);
+}
+
+blockquote {
+  font-style: italic;
+  color: #ddd;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #e09cab;
+}
+
+/* Check-in */
+.mood-slider {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.checkin-section, .journal-section, .comments-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: rgba(38, 38, 56, 0.85);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(200, 160, 220, 0.2);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Comments as leaves */
+.leaf-note {
+  background-color: rgba(67, 67, 90, 0.85);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #cfa7e1;
+  border-radius: 0.75rem;
+  list-style: none;
+  box-shadow: 0 2px 8px rgba(173, 216, 230, 0.1);
+}
+
+/* Floral borders */
+.flower-border {
+  border: 2px dashed #cfa7e1;
+  background-image: url('../images/border-flowers.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeBlossom {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+body {
+  animation: fadeBlossom 1.2s ease-out;
+}

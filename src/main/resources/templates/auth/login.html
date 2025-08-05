@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <title>MentalWellness</title>
+</head>
+<body class="dark-floral-bg">
+<div th:replace="~{fragments/header :: header}"></div>
+<section class="form-card flower-border">
+    <h2>Welcome Back 🌙</h2>
+    <form th:action="@{/login}" method="post">
+        <input type="text" name="username" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+</section>
+</body>
+</html>

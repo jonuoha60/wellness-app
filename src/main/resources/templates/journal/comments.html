@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <title>MentalWellness</title>
+</head>
+<body class="dark-floral-bg">
+<div th:replace="~{fragments/header :: header}"></div>
+<section class="comments-section">
+    <h2>Anonymous Blossoms 🌷</h2>
+    <ul>
+        <li th:each="comment : ${comments}" class="leaf-note">
+            <strong th:text="${comment.alias}"></strong>: <span th:text="${comment.content}"></span>
+        </li>
+    </ul>
+    <form th:action="@{/comments/1}" method="post">
+        <input type="text" name="alias" placeholder="Your Forest Name 🌲">
+        <textarea name="content" placeholder="Leave a kind word... 🌼"></textarea>
+        <button type="submit">Post Comment</button>
+    </form>
+</section>
+</body>
+</html>

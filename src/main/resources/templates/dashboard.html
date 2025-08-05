@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+  <title>MentalWellness</title>
+</head>
+<body class="dark-floral-bg">
+<div th:replace="~{fragments/header :: header}"></div>
+<section class="dashboard-layout">
+  <div class="card mood-journal-card">
+    <h3>Your Mood Today 🌧️</h3>
+    <p><a th:href="@{/checkin}">Update Check-In</a></p>
+    <h3>Your Journal 🌿</h3>
+    <p><a th:href="@{/journal}">Write Today's Entry</a></p>
+  </div>
+  <div class="card quote-comment-card">
+    <h3>🌸 Quote of the Day</h3>
+    <blockquote>“Out of suffering have emerged the strongest souls; the most massive characters are seared with scars.”</blockquote>
+    <h3>Peer Comments 🍃</h3>
+    <p><a th:href="@{/comments/1}">See Comments</a></p>
+  </div>
+</section>
+</body>
+</html>

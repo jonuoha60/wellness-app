@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <title>MentalWellness</title>
+</head>
+<body class="dark-floral-bg">
+<div th:replace="~{fragments/header :: header}"></div>
+<section class="checkin-section">
+    <h2>How are you feeling today? 🌼</h2>
+    <form th:action="@{/checkin}" th:object="${checkIn}" method="post">
+        <label>Emoji Mood:</label>
+        <input type="range" min="1" max="10" th:field="*{moodScore}" class="mood-slider">
+        <button type="submit">Submit Mood</button>
+    </form>
+</section>
+</body>
+</html>
