@@ -15,6 +15,14 @@
         <input type="password" th:field="*{password}" placeholder="Password">
         <button type="submit">Register</button>
     </form>
+  <div style="display: flex; align-items: center; gap: 8px;">
+
+    <p>Have an account?</p>
+<a th:href="@{/login}">
+    Login
+</a>
+</div>
+
 </section>
 </body>
 </html>
