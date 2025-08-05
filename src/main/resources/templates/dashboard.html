@@ -9,6 +9,7 @@
 <div th:replace="~{fragments/header :: header}"></div>
 <section class="dashboard-layout">
   <div class="card mood-journal-card">
+<h2 th:text="'Good day, ' + ${email}">Good day,</h2>
     <h3>Your Mood Today 🌧️</h3>
     <p><a th:href="@{/checkin}">Update Check-In</a></p>
     <h3>Your Journal 🌿</h3>
